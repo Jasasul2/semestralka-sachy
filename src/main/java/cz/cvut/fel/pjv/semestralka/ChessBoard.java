@@ -5,6 +5,7 @@ package cz.cvut.fel.pjv.semestralka;
  * @author ondra
  */
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JFrame;
@@ -17,12 +18,19 @@ public class ChessBoard extends JFrame {
     public ChessBoard(int windowSize, int squaresCount, int borderSize, ColorScheme colors) {
 
         // Setting up the window 
+//        JFrame frame = new JFrame();
+//        frame.setTitle("Chess");
+//        frame.setSize(new Dimension (windowSize + 2 * borderSize, windowSize + 2 * borderSize));
+//        frame.setVisible(true);
+//        frame.getContentPane().setBackground(colors.background);
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         setTitle("Chess");
         setSize(windowSize + 2 * borderSize, windowSize + 2 * borderSize);
         setVisible(true);
         setBackground(colors.background);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
         // Assigning the variables for later use
         this.windowSize = windowSize;
         this.squaresCount = squaresCount;
@@ -44,7 +52,7 @@ public class ChessBoard extends JFrame {
             for (int x = 0; x < squaresCount; x++) {
                 
                 g.setColor(colors[colorIndex]);
-                g2d.fillRect(borderSize + x * recSize, borderSize + y * recSize, recSize, recSize);
+                g.fillRect(borderSize + x * recSize, borderSize + y * recSize, recSize, recSize);
                 
                 colorIndex++;
                 colorIndex = colorIndex % 2;
