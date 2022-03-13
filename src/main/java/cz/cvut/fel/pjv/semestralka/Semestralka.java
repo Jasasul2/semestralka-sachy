@@ -11,14 +11,19 @@ public class Semestralka {
 
     public static void main(String[] args) {
 
-
-        ColorScheme kubovoSchema = new ColorScheme(
-                "kuba",
+        ColorScheme basic = new ColorScheme(
+                "Basic",
                 new Color(17, 130, 59),
                 new Color(0, 77, 37),
                 new Color(2, 35, 28));
 
-        ChessBoard board = new ChessBoard(540, 8, 50, kubovoSchema);
+        ColorScheme GaY = new ColorScheme(
+                "Green & Yellow",
+                new Color(113, 139, 79),
+                new Color(233, 234, 204),
+                new Color(31, 38, 21));
+
+        ChessBoard board = new ChessBoard(540, 8, 50, GaY);
     }
 
 }

@@ -21,7 +21,7 @@ public class ChessBoard {
         frame.setTitle("Chess");
 //        frame.setUndecorated(true); // vypne horni listu okna
         frame.setLocationRelativeTo(null);
-//        frame.setLocationByPlatform(true);
+        frame.setLocationByPlatform(true);
         frame.setBounds(borderSize, borderSize, windowSize + borderSize, windowSize + borderSize);
         JPanel pn = new JPanel() {
             @Override
