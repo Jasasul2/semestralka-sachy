@@ -21,9 +21,9 @@ public class Semestralka {
                 "Green & Yellow",
                 new Color(113, 139, 79),
                 new Color(233, 234, 204),
-                new Color(31, 38, 21));
+                new Color(0, 0, 0));
 
-        ChessBoard board = new ChessBoard(540, 8, 50, GaY);
+        ChessBoard board = new ChessBoard(8, 64, GaY);
     }
 
 }

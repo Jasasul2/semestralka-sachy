@@ -14,15 +14,15 @@ public class ChessBoard {
     public int windowSize, squaresCount, borderSize;
     public Color color1, color2;
 
-    public ChessBoard(int windowSize, int squaresCount, int borderSize, ColorScheme colors) {
+    public ChessBoard(int squaresCount, int tileSize, ColorScheme colors) {
 
         // Setting up the window
+        int windowSize = squaresCount * (tileSize + squaresCount);
         JFrame frame = new JFrame();
         frame.setTitle("Chess");
-//        frame.setUndecorated(true); // vypne horni listu okna
         frame.setLocationRelativeTo(null);
         frame.setLocationByPlatform(true);
-        frame.setBounds(borderSize, borderSize, windowSize + borderSize, windowSize + borderSize);
+        frame.setBounds(50, 50, windowSize, windowSize);
         JPanel pn = new JPanel() {
             @Override
             public void paint(Graphics g) {
@@ -33,13 +33,11 @@ public class ChessBoard {
                         } else {
                             g.setColor(colors.player2);
                         }
-                        g.fillRect(i * 64, j * 64, 64, 64);
+                        g.fillRect(i * tileSize, j * tileSize, tileSize, tileSize);
                     }
-
                 }
             }
         };
-        pn.setBounds(0, 0, borderSize, borderSize);
         frame.add(pn);
         frame.setBackground(colors.background);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
