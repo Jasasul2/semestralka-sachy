@@ -17,12 +17,12 @@ public class ChessBoard {
     public ChessBoard(int squaresCount, int tileSize, ColorScheme colors) {
 
         // Setting up the window
-        int windowSize = squaresCount * (tileSize + squaresCount);
+        int windowSize = squaresCount * (tileSize + 2);
         JFrame frame = new JFrame();
         frame.setTitle("Chess");
         frame.setLocationRelativeTo(null);
         frame.setLocationByPlatform(true);
-        frame.setBounds(50, 50, windowSize, windowSize);
+        frame.setBounds(50, 50, windowSize, windowSize+25);
         JPanel pn = new JPanel() {
             @Override
             public void paint(Graphics g) {
