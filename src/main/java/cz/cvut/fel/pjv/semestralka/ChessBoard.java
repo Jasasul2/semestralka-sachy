@@ -22,20 +22,20 @@ public class ChessBoard {
 //        frame.setUndecorated(true); // vypne horni listu okna
         frame.setLocationRelativeTo(null);
 //        frame.setLocationByPlatform(true);
-        frame.setBounds(borderSize, borderSize, windowSize+borderSize, windowSize+borderSize);
+        frame.setBounds(borderSize, borderSize, windowSize + borderSize, windowSize + borderSize);
         JPanel pn = new JPanel() {
             @Override
-            public void paint(Graphics g){
+            public void paint(Graphics g) {
                 for (int i = 0; i < squaresCount; i++) {
                     for (int j = 0; j < squaresCount; j++) {
-                        if ((i+j)% 2 == 0){
+                        if ((i + j) % 2 == 0) {
                             g.setColor(colors.player1);
                         } else {
                             g.setColor(colors.player2);
                         }
-                        g.fillRect(i*64, j*64, 64, 64);
+                        g.fillRect(i * 64, j * 64, 64, 64);
                     }
-                    
+
                 }
             }
         };
@@ -44,7 +44,7 @@ public class ChessBoard {
         frame.setBackground(colors.background);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        
+
         // Assigning the variables for later use
         this.windowSize = windowSize;
         this.squaresCount = squaresCount;
@@ -52,4 +52,4 @@ public class ChessBoard {
         this.color1 = colors.player1;
         this.color2 = colors.player2;
     }
-}    
+}
