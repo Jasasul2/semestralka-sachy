@@ -40,7 +40,7 @@ public abstract class Piece {
         this.value = value;
     }
 
-    public void destroy() {
+    public void getCaptured() {
 
     }
 

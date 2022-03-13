@@ -11,13 +11,18 @@ import javax.swing.JPanel;
 
 public class ChessBoard {
 
-    public int windowSize, squaresCount, borderSize;
+    public int windowSize, squaresCount;
     public Color color1, color2;
 
     public ChessBoard(int squaresCount, int tileSize, ColorScheme colors) {
 
+        // Assigning the variables for later use
+        this.squaresCount = squaresCount;
+        this.color1 = colors.tileColor1;
+        this.color2 = colors.tileColor2;
+
         // Setting up the window
-        int windowSize = squaresCount * (tileSize + 2);
+        windowSize = squaresCount * (tileSize + 2);
         JFrame frame = new JFrame();
         frame.setTitle("Chess");
         frame.setLocationRelativeTo(null);
@@ -42,12 +47,5 @@ public class ChessBoard {
         frame.setBackground(colors.background);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-
-        // Assigning the variables for later use
-        this.windowSize = windowSize;
-        this.squaresCount = squaresCount;
-        this.borderSize = borderSize;
-        this.color1 = colors.tileColor1;
-        this.color2 = colors.tileColor2;
     }
 }

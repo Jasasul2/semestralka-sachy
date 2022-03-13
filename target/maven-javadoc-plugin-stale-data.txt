@@ -1,0 +1,52 @@
+@options
+@packages
+@argfile
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'C:/Users/ondra/OneDrive/Dokumenty/NetBeansProjects/Semestralka/semestralka-sachy/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2022. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/ondra/OneDrive/Dokumenty/NetBeansProjects/Semestralka/semestralka-sachy/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Semestralka 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'Semestralka 1.0-SNAPSHOT API'
+cz.cvut.fel.pjv.semestralka
+'C:/Users/ondra/OneDrive/Dokumenty/NetBeansProjects/Semestralka/semestralka-sachy/src/main/java/cz/cvut/fel/pjv/semestralka/Army.java'
+'C:/Users/ondra/OneDrive/Dokumenty/NetBeansProjects/Semestralka/semestralka-sachy/src/main/java/cz/cvut/fel/pjv/semestralka/ChessBoard.java'
+'C:/Users/ondra/OneDrive/Dokumenty/NetBeansProjects/Semestralka/semestralka-sachy/src/main/java/cz/cvut/fel/pjv/semestralka/ColorScheme.java'
+'C:/Users/ondra/OneDrive/Dokumenty/NetBeansProjects/Semestralka/semestralka-sachy/src/main/java/cz/cvut/fel/pjv/semestralka/Coordinates.java'
+'C:/Users/ondra/OneDrive/Dokumenty/NetBeansProjects/Semestralka/semestralka-sachy/src/main/java/cz/cvut/fel/pjv/semestralka/Piece.java'
+'C:/Users/ondra/OneDrive/Dokumenty/NetBeansProjects/Semestralka/semestralka-sachy/src/main/java/cz/cvut/fel/pjv/semestralka/pieceType.java'
+'C:/Users/ondra/OneDrive/Dokumenty/NetBeansProjects/Semestralka/semestralka-sachy/src/main/java/cz/cvut/fel/pjv/semestralka/Player.java'
+'C:/Users/ondra/OneDrive/Dokumenty/NetBeansProjects/Semestralka/semestralka-sachy/src/main/java/cz/cvut/fel/pjv/semestralka/Semestralka.java'
+'C:/Users/ondra/OneDrive/Dokumenty/NetBeansProjects/Semestralka/semestralka-sachy/src/main/java/cz/cvut/fel/pjv/semestralka/Tile.java'
+C:\Users\ondra\OneDrive\Dokumenty\NetBeansProjects\Semestralka\semestralka-sachy\src\main\java = 1646935519346
+C:\Users\ondra\OneDrive\Dokumenty\NetBeansProjects\Semestralka\semestralka-sachy\target\site\apidocs\allclasses-index.html = 1647195926765
+C:\Users\ondra\OneDrive\Dokumenty\NetBeansProjects\Semestralka\semestralka-sachy\target\site\apidocs\allpackages-index.html = 1647195926767
+C:\Users\ondra\OneDrive\Dokumenty\NetBeansProjects\Semestralka\semestralka-sachy\target\site\apidocs\element-list = 1647195926705
+C:\Users\ondra\OneDrive\Dokumenty\NetBeansProjects\Semestralka\semestralka-sachy\target\site\apidocs\help-doc.html = 1647195926791
+C:\Users\ondra\OneDrive\Dokumenty\NetBeansProjects\Semestralka\semestralka-sachy\target\site\apidocs\index-all.html = 1647195926785
+C:\Users\ondra\OneDrive\Dokumenty\NetBeansProjects\Semestralka\semestralka-sachy\target\site\apidocs\index.html = 1647195926787
+C:\Users\ondra\OneDrive\Dokumenty\NetBeansProjects\Semestralka\semestralka-sachy\target\site\apidocs\jquery-ui.overrides.css = 1647195926815
+C:\Users\ondra\OneDrive\Dokumenty\NetBeansProjects\Semestralka\semestralka-sachy\target\site\apidocs\member-search-index.js = 1647195926771
+C:\Users\ondra\OneDrive\Dokumenty\NetBeansProjects\Semestralka\semestralka-sachy\target\site\apidocs\module-search-index.js = 1647195926768
+C:\Users\ondra\OneDrive\Dokumenty\NetBeansProjects\Semestralka\semestralka-sachy\target\site\apidocs\overview-tree.html = 1647195926752
+C:\Users\ondra\OneDrive\Dokumenty\NetBeansProjects\Semestralka\semestralka-sachy\target\site\apidocs\package-search-index.js = 1647195926769
+C:\Users\ondra\OneDrive\Dokumenty\NetBeansProjects\Semestralka\semestralka-sachy\target\site\apidocs\script.js = 1647195926794
+C:\Users\ondra\OneDrive\Dokumenty\NetBeansProjects\Semestralka\semestralka-sachy\target\site\apidocs\search.js = 1647195926795
+C:\Users\ondra\OneDrive\Dokumenty\NetBeansProjects\Semestralka\semestralka-sachy\target\site\apidocs\stylesheet.css = 1647195926793
+C:\Users\ondra\OneDrive\Dokumenty\NetBeansProjects\Semestralka\semestralka-sachy\target\site\apidocs\tag-search-index.js = 1647195926771
+C:\Users\ondra\OneDrive\Dokumenty\NetBeansProjects\Semestralka\semestralka-sachy\target\site\apidocs\type-search-index.js = 1647195926770
