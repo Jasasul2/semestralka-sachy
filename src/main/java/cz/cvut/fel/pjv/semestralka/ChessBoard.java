@@ -22,16 +22,16 @@ public class ChessBoard {
         frame.setTitle("Chess");
         frame.setLocationRelativeTo(null);
         frame.setLocationByPlatform(true);
-        frame.setBounds(50, 50, windowSize, windowSize+25);
+        frame.setBounds(50, 50, windowSize, windowSize + 25);
         JPanel pn = new JPanel() {
             @Override
             public void paint(Graphics g) {
                 for (int i = 0; i < squaresCount; i++) {
                     for (int j = 0; j < squaresCount; j++) {
                         if ((i + j) % 2 == 0) {
-                            g.setColor(colors.player1);
+                            g.setColor(colors.tileColor1);
                         } else {
-                            g.setColor(colors.player2);
+                            g.setColor(colors.tileColor2);
                         }
                         g.fillRect(i * tileSize, j * tileSize, tileSize, tileSize);
                     }
@@ -47,7 +47,7 @@ public class ChessBoard {
         this.windowSize = windowSize;
         this.squaresCount = squaresCount;
         this.borderSize = borderSize;
-        this.color1 = colors.player1;
-        this.color2 = colors.player2;
+        this.color1 = colors.tileColor1;
+        this.color2 = colors.tileColor2;
     }
 }
