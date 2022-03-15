@@ -45,6 +45,8 @@ public final class Tile {
     public static int size;
     
     private JPanel panel;
+    
+    private JPanel tileGraphics;
 
     // ---------------------------- CONSTRUCTOR --------------------------------
     /**
@@ -65,7 +67,7 @@ public final class Tile {
 
     // ------------------------------ METHODS ----------------------------------
     public void InitializeGraphics() {
-        JPanel tileGraphics = new JPanel() {
+        tileGraphics = new JPanel() {
             @Override
             public void paint(Graphics g) {
                 g.setColor(defaultColor);
