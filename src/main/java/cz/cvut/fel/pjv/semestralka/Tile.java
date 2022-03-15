@@ -1,6 +1,7 @@
 package cz.cvut.fel.pjv.semestralka;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -43,7 +44,7 @@ public final class Tile {
      */
     public static int size;
     
-    private JFrame frame;
+    private JPanel panel;
 
     // ---------------------------- CONSTRUCTOR --------------------------------
     /**
@@ -53,12 +54,12 @@ public final class Tile {
      * @param isColor1
      * @param defaultColor
      */
-    public Tile(Coordinates coordinates, boolean isColor1, Color defaultColor, JFrame frame) {
+    public Tile(Coordinates coordinates, boolean isColor1, Color defaultColor, JPanel panel) {
         this.coordinates = coordinates;
         this.isColor1 = isColor1;
         this.isOccupied = false; // No tile is occupied by default 
         this.defaultColor = defaultColor;
-        this.frame = frame;
+        this.panel = panel;
         InitializeGraphics();
     }
 
@@ -68,10 +69,11 @@ public final class Tile {
             @Override
             public void paint(Graphics g) {
                 g.setColor(defaultColor);
-                g.fillRect(coordinates.getX() * size, coordinates.getY() * size, size, size);
+                g.fillRect(0, 0, size, size);
             }
         };
-        frame.add(tileGraphics); 
+        tileGraphics.setPreferredSize(new Dimension(size, size));
+        panel.add(tileGraphics, coordinates.getY(), coordinates.getX()); 
    }
 
     /**

@@ -4,8 +4,13 @@ package cz.cvut.fel.pjv.semestralka;
  *
  * @author ondra
  */
+import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class GameManager {
 
@@ -23,32 +28,43 @@ public class GameManager {
         this.squaresCount = tileRowCount;
         this.color1 = colors.tileColor1;
         this.color2 = colors.tileColor2;
+        this.windowSize = tileRowCount * (tileSize + 2);
 
         // Setting up the window
         Tile.size = tileSize;
-        windowSize = tileRowCount * (tileSize + 2);
         JFrame frame = new JFrame();
-        frame.setTitle("Chess");
-        frame.setLocationRelativeTo(null);
-        frame.setLocationByPlatform(true);
-        frame.setBounds(50, 50, windowSize, windowSize + 25);
+        JPanel masterPanel = new JPanel();
+        masterPanel.setLayout(new GridLayout(0, 1, 50, 50));    
+        masterPanel.setBorder(BorderFactory.createEmptyBorder(30,30,30,30));
+        
+        JPanel board = new JPanel();
+        GridLayout boardLayout = new GridLayout(tileRowCount, tileRowCount);
+        board.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
+        board.setLayout(boardLayout);
 
         // Creating the chessboard 
         chessboard = new Tile[tileRowCount][tileRowCount];
+        boolean isColor1 = false;
         for (int y = 0; y < tileRowCount; y++) {
             for (int x = 0; x < tileRowCount; x++) {
-                boolean isColor1 = false;
                 Color tileColor = color1;
                 if ((y + x) % 2 == 0) {
-                    isColor1 = true;
+                    isColor1 = !isColor1;
                     tileColor = color2;
                 }
-
-                chessboard[y][x] = new Tile(new Coordinates(x, y), isColor1, tileColor, frame);
+                chessboard[y][x] = new Tile(new Coordinates(x, y), isColor1, tileColor, board);
             }
         }
+        JPanel compactPanel = new JPanel();
+        compactPanel.setLayout(new FlowLayout());
+        compactPanel.add(board);
+        masterPanel.add(compactPanel, BorderLayout.CENTER);
+        
+        frame.add(masterPanel);
+        frame.setTitle("Chess");
         frame.setBackground(colors.background);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
         frame.setVisible(true);
     }
     
