@@ -4,7 +4,6 @@ package cz.cvut.fel.pjv.semestralka;
  *
  * @author ondra
  */
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -66,8 +65,8 @@ public class GameManager {
         boardTitle.setText("Chess Board");
         
         // Adding all widgets to main panel
-        masterPanel.add(boardTitle);//, BorderLayout.PAGE_START);
-        masterPanel.add(board);//, BorderLayout.PAGE_END);
+        masterPanel.add(boardTitle);
+        masterPanel.add(board);
         
         // Window settings
         frame.add(masterPanel);
