@@ -1,23 +1,25 @@
 package cz.cvut.fel.pjv.semestralka;
 
 import java.awt.Color;
+import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
  * @author ondra
  */
-public class Tile {
+public final class Tile {
 
     // ----------------------------- ATTRIBUTES --------------------------------
-    
     /**
      * Coordinates of the tile (x, y)
      */
     public Coordinates coordinates;
 
     /**
-     * Whether the playerColor of the tile is the color of the first player 
-     * (not to be mistaken with the color of the piece)
+     * Whether the playerColor of the tile is the color of the first player (not
+     * to be mistaken with the color of the piece)
      */
     public boolean isColor1;
 
@@ -36,24 +38,42 @@ public class Tile {
      */
     private Color defaultColor;
 
-    // ---------------------------- CONSTRUCTOR --------------------------------
+    /**
+     * Size of all tiles in pixels 
+     */
+    public static int size;
     
+    private JFrame frame;
+
+    // ---------------------------- CONSTRUCTOR --------------------------------
     /**
      * Coordinates of the tile (x, y)
      *
      * @param coordinates
      * @param isColor1
-     * @param isOccupied
      * @param defaultColor
      */
-    public Tile(Coordinates coordinates, boolean isColor1, boolean isOccupied, Color defaultColor) {
+    public Tile(Coordinates coordinates, boolean isColor1, Color defaultColor, JFrame frame) {
         this.coordinates = coordinates;
         this.isColor1 = isColor1;
-        this.isOccupied = isOccupied;
+        this.isOccupied = false; // No tile is occupied by default 
         this.defaultColor = defaultColor;
+        this.frame = frame;
+        InitializeGraphics();
     }
 
     // ------------------------------ METHODS ----------------------------------
+    public void InitializeGraphics() {
+        JPanel tileGraphics = new JPanel() {
+            @Override
+            public void paint(Graphics g) {
+                g.setColor(defaultColor);
+                g.fillRect(coordinates.getX() * size, coordinates.getY() * size, size, size);
+            }
+        };
+        frame.add(tileGraphics); 
+   }
+
     /**
      * Highlights the color of this piece to indicate a possible move
      */

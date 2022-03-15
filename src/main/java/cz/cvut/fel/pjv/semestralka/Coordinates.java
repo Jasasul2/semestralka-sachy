@@ -6,14 +6,17 @@ package cz.cvut.fel.pjv.semestralka;
  */
 public class Coordinates {
 
+    // ----------------------------- ATTRIBUTES --------------------------------
     private int x;
     private int y;
 
+    // ---------------------------- CONSTRUCTOR --------------------------------
     public Coordinates(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
+    // ------------------------------ METHODS ----------------------------------
     public int getX() {
         return x;
     }

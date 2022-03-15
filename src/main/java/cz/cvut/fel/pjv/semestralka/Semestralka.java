@@ -23,7 +23,7 @@ public class Semestralka {
                 new Color(233, 234, 204),
                 new Color(0, 0, 0));
 
-        ChessBoard board = new ChessBoard(8, 64, GaY);
+        GameManager board = new GameManager(8, 64, basic);
     }
 
 }

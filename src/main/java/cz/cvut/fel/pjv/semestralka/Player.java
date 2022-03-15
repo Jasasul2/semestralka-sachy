@@ -6,6 +6,7 @@ package cz.cvut.fel.pjv.semestralka;
  */
 public class Player {
 
+    // ----------------------------- ATTRIBUTES --------------------------------
     public boolean isPlayerOne;
     public boolean isAI;
     public String playerName;
@@ -13,17 +14,19 @@ public class Player {
     public int scorePoints;
     public int skillPoints;
 
+    // ---------------------------- CONSTRUCTOR --------------------------------
     public Player(boolean isPlayerOne, boolean isAI, String playerName, Army army) {
         this.isPlayerOne = isPlayerOne;
         this.isAI = isAI;
         this.playerName = playerName;
         this.army = army;
-        
+
         // Score and skill points always start at zero 
         this.scorePoints = 0;
         this.skillPoints = 0;
     }
 
+    // ------------------------------ METHODS ----------------------------------
     public boolean isIsPlayerOne() {
         return isPlayerOne;
     }

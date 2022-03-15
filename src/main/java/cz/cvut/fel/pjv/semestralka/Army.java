@@ -6,5 +6,6 @@ package cz.cvut.fel.pjv.semestralka;
  */
 public abstract class Army {
 
+    // ----------------------------- ATTRIBUTES --------------------------------
     public pieceType[] availablePieces;
 }
