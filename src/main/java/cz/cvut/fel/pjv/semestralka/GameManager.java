@@ -20,6 +20,9 @@ public class GameManager {
     public Color color1;
     public Color color2;
     public Tile[][] chessboard;
+    private final JFrame frame;
+    private final JPanel masterPanel;
+    private JPanel board;
 
     // ---------------------------- CONSTRUCTOR --------------------------------
     public GameManager(int tileRowCount, int tileSize, ColorScheme colors) {
@@ -32,15 +35,14 @@ public class GameManager {
 
         // Setting up the window
         Tile.size = tileSize;
-        JFrame frame = new JFrame();
-        JPanel masterPanel = new JPanel();
+        frame = new JFrame();
+        masterPanel = new JPanel();
         masterPanel.setLayout(new GridLayout(0, 1, 50, 50));    
         masterPanel.setBorder(BorderFactory.createEmptyBorder(30,30,30,30));
         
-        JPanel board = new JPanel();
-        GridLayout boardLayout = new GridLayout(tileRowCount, tileRowCount);
-        board.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
-        board.setLayout(boardLayout);
+        JPanel boardGrid = new JPanel();
+        boardGrid.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
+        boardGrid.setLayout(new GridLayout(tileRowCount, tileRowCount));
 
         // Creating the chessboard 
         chessboard = new Tile[tileRowCount][tileRowCount];
@@ -55,10 +57,10 @@ public class GameManager {
                 chessboard[y][x] = new Tile(new Coordinates(x, y), isColor1, tileColor, board);
             }
         }
-        JPanel compactPanel = new JPanel();
-        compactPanel.setLayout(new FlowLayout());
-        compactPanel.add(board);
-        masterPanel.add(compactPanel, BorderLayout.CENTER);
+        board = new JPanel();
+        board.setLayout(new FlowLayout());
+        board.add(boardGrid);
+        masterPanel.add(board, BorderLayout.CENTER);
         
         frame.add(masterPanel);
         frame.setTitle("Chess");
