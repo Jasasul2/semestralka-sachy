@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author ondra
+ * @author Maceska, Kolar
  */
 public final class Tile {
 

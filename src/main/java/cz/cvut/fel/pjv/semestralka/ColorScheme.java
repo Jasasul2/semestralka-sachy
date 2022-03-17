@@ -4,7 +4,7 @@ import java.awt.Color;
 
 /**
  *
- * @author ondra
+ * @author Maceska, Kolar
  */
 public class ColorScheme {
 

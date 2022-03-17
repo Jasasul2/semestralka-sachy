@@ -2,7 +2,7 @@ package cz.cvut.fel.pjv.semestralka;
 
 /**
  *
- * @author ondra
+ * @author Maceska, Kolar
  */
 public class Coordinates {
 

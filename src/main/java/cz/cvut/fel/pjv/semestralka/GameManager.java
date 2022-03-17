@@ -2,7 +2,7 @@ package cz.cvut.fel.pjv.semestralka;
 
 /**
  *
- * @author ondra
+ * @author Maceska, Kolar
  */
 import java.awt.Color;
 import java.awt.Dimension;
@@ -39,6 +39,7 @@ public class GameManager {
         masterPanel.setLayout(new FlowLayout());
         masterPanel.setBorder(BorderFactory.createEmptyBorder(30,30,30,30));
         
+        // Set up panel in gridlayout for chess board
         JPanel boardGrid = new JPanel();
         boardGrid.setBorder(BorderFactory.createEmptyBorder());
         boardGrid.setLayout(new GridLayout(tileRowCount, tileRowCount));
